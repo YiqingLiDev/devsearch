@@ -2,6 +2,14 @@
 
 {% block content %}
 
-<h1>This is the Single Project Template for {{pk}}!!</h1>
+<h1>Single Project Template for {{ project.title }}</h1>
+<hr>
+<p>Tag</p>
+{% for tag in project.tags.all %}
+    <span style="border:1px solid grey">{{tag}}</span>
+{% endfor %}
+<hr>
+<p>Description</p>
+<p>{{ project.description }}</p>
 
 {% endblock %}
