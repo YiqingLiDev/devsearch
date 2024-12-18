@@ -1,6 +1,5 @@
-<p>This is a placeholder for NAV bar.</p>
+{% load static %}
 
-
-<a href="{% url 'projects' %}"><h1>Logo</h1></a>
+<a href="{% url 'projects' %}"><img src="{% static 'images/logo.svg' %}" alt="Logo"></a>
 <a href="{% url 'createprojects' %}">Add Projects</a>
 <hr>
