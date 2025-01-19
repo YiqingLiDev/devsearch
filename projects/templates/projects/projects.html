@@ -29,31 +29,44 @@
             <div class="grid grid--three">
 
                 {% for project in projects %}
-                <div class="column">
-                    <div class="card project">
-                        <a href="{% url 'project' project.id %}" class="project">
-                            <img class="project__thumbnail" src="{{project.imageURL}}" alt="project thumbnail" />
-                            <div class="card__body">
-                                <h3 class="project__title">{{project.title}}</h3>
-                                <p><a class="project__author" href="">By
-                                        {{project.owner.name}}</a>
-                                </p>
-                                <p class="project--rating">
-                                    <span style="font-weight: bold;">{{project.vote_ratio}}%</span> Positive
-                                    Feedback ({{project.vote_total}}) Vote{{project.vote_total|pluralize:"s"}}
-                                </p>
-                                <div class="project__tags">
-                                    {% for tag in project.tags.all %}
-                                    <span class="tag tag--pill tag--main">
-                                        <small>{{tag}}</small>
-                                    </span>
-                                    {% endfor %}
-
-                                </div>
-                            </div>
-                        </a>
+                <div class="column card">
+                    <div class="dev">
+                      <a href="/profile.html" class="card__body">
+                        <div class="dev__profile">
+                          <img class="avatar avatar--md" src="https://avatars.githubusercontent.com/u/22437186" alt="image" />
+                          <div class="dev__meta">
+                            <h3>Shahriar P. Shuvo</h3>
+                            <h5>FullStack Web Designer & Developer</h5>
+                          </div>
+                        </div>
+                        <p class="dev__info">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, ducimus inventore! Sunt,
+                          veniam veritatis? Veritatis placeat, deleniti iure tempore veniam perspiciatis, soluta cupiditate
+                          animi, exercitationem molestias nam doloremque architecto odit.
+                        </p>
+                        <div class="dev__skills">
+                          <span class="tag tag--pill tag--main">
+                            <small>JavaScript</small>
+                          </span>
+                          <span class="tag tag--pill tag--main">
+                            <small>React</small>
+                          </span>
+                          <span class="tag tag--pill tag--main">
+                            <small>SCSS</small>
+                          </span>
+                          <span class="tag tag--pill tag--main">
+                            <small>Nodejs</small>
+                          </span>
+                          <span class="tag tag--pill tag--main">
+                            <small>Express</small>
+                          </span>
+                          <span class="tag tag--pill tag--main">
+                            <small>GraphQL</small>
+                          </span>
+                        </div>
+                      </a>
                     </div>
-                </div>
+                  </div>
                 {% endfor %}
 
             </div>
